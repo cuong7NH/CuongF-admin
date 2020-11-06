@@ -42,6 +42,10 @@ img {
 header.light {
   background-color: #ffffff;
   color: #727475; }
+  header.light ::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  header.light ::-webkit-scrollbar-thumb {
+    background: #727475; }
   header.light div.navbar-icon__bar {
     background-color: #727475; }
   header.light span#cuongf {
@@ -55,10 +59,31 @@ header.light {
       color: #727475; }
     header.light .user-menu li:hover {
       background-color: #f1f1f1; }
+  header.light .notifications {
+    background-color: #ffffff; }
+    header.light .notifications__head {
+      color: #212529;
+      border-bottom: 1px solid #f1f1f1; }
+    header.light .notifications__menu li svg {
+      color: #727475; }
+    header.light .notifications__menu li p {
+      color: #212529; }
+    header.light .notifications__menu li small {
+      color: #212529; }
+    header.light .notifications__menu li:hover {
+      background-color: #f1f1f1; }
+    header.light .notifications__foot {
+      border-top: 1px solid #f1f1f1; }
+      header.light .notifications__foot a {
+        color: #212529; }
 
 header.dark {
   background-color: #23242D;
   color: #f5f6fa; }
+  header.dark ::-webkit-scrollbar-track {
+    background: #181818; }
+  header.dark ::-webkit-scrollbar-thumb {
+    background: #727475; }
   header.dark div.navbar-icon__bar {
     background-color: #ffffff; }
   header.dark span#cuongf {
@@ -73,7 +98,31 @@ header.dark {
       color: #fff; }
     header.dark .user-menu li:hover {
       background-color: #181818; }
+  header.dark .notifications {
+    background-color: #23242D; }
+    header.dark .notifications__head {
+      color: #f5f6fa;
+      border-bottom: 1px solid #181818; }
+    header.dark .notifications__menu li svg {
+      color: #f5f6fa; }
+    header.dark .notifications__menu li p {
+      color: #909090; }
+    header.dark .notifications__menu li small {
+      color: #909090; }
+    header.dark .notifications__menu li:hover {
+      background-color: #181818; }
+    header.dark .notifications__foot {
+      border-top: 1px solid #181818; }
+      header.dark .notifications__foot a {
+        color: #909090; }
 
+::-webkit-scrollbar {
+  width: 8px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; }
+
+/* Track */
 header {
   position: fixed;
   top: 0;
@@ -176,8 +225,45 @@ header {
         line-height: 1;
         top: -1px;
         right: 05px; }
-      header .navbar-right .bell-btn:hover {
-        opacity: 0.85; }
+      header .navbar-right .bell-btn .notifications {
+        width: 380px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        transition: 0.5s; }
+        header .navbar-right .bell-btn .notifications__head {
+          padding: 20px;
+          text-align: center;
+          line-height: 19.2px;
+          margin-bottom: 0; }
+        header .navbar-right .bell-btn .notifications__menu {
+          max-height: 500px;
+          overflow-y: hidden; }
+          header .navbar-right .bell-btn .notifications__menu:hover {
+            overflow-y: auto; }
+          header .navbar-right .bell-btn .notifications__menu li {
+            padding: 8px 15px 5px 82px;
+            position: relative;
+            height: 50px; }
+            header .navbar-right .bell-btn .notifications__menu li svg {
+              position: absolute;
+              top: 50%;
+              left: 41px;
+              transform: translate(-50%, -50%); }
+            header .navbar-right .bell-btn .notifications__menu li p {
+              font-size: 14px;
+              line-height: 16px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-bottom: 0; }
+        header .navbar-right .bell-btn .notifications__foot {
+          padding: 20px;
+          text-align: center;
+          line-height: 19.2px;
+          margin-bottom: 0; }
     header .navbar-right .avatar {
       position: relative; }
       header .navbar-right .avatar .avatar-wrapper {
