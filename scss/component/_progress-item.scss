@@ -1,0 +1,38 @@
+
+
+
+
+.progress-item {
+    margin-bottom: 10px;
+    p {
+        margin: 16px 0;
+        font-size: 16px;
+        line-height: 19.2px;
+        span {
+            float: right;
+        }
+    }
+    
+    &__bar {
+        height: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        
+    }
+}
+div.w50 {
+    width: 50%;
+    height: 10px;
+}
+div.w60 {
+    width: 60%;
+    height: 10px;
+}
+div.w40 {
+    width: 40%;
+    height: 10px;
+}
+div.w20 {
+    width: 20%;
+    height: 10px;
+}

@@ -1,0 +1,35 @@
+
+
+
+
+
+
+.counter-box {
+    text-align: center;
+    padding: 16px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    p {
+        margin: 14px 0;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+.counter-box--primary {
+    background-color: $primary-color;
+}
+
+.counter-box--warning {
+    background-color: $warning-color;
+}
+
+.counter-box--success {
+    background-color: $success-color;
+}
+
+.counter-box--danger {
+    background-color: $danger-color;
+}

@@ -1,0 +1,244 @@
+
+
+header.light {
+    background-color: $light-background;
+    color:$light-second-color;
+    div.navbar-icon__bar {
+        background-color: $light-second-color;
+    }
+    span#cuongf {
+        color: #000;
+    }
+    .navbar-form {
+        input {
+            background-color: $light-second-background;
+        }
+    }
+    .user-menu {
+        background-color: $light-background;
+        color: $light-color;
+        svg {
+            color: $light-second-color;
+        }
+        li {
+            &:hover {
+                background-color: $light-second-background;
+            }
+        }
+    }
+    
+}
+header.dark {
+    background-color: $dark-background;
+    color:$dark-second-color;
+    div.navbar-icon__bar {
+        background-color: $light-background;
+    }
+    span#cuongf {
+        color: #fff;
+    }
+    .navbar-form {
+        input {
+            background-color: $dark-second-background;
+            color: $dark-color;
+        }
+    }
+    .user-menu {
+        background-color: $dark-background;
+        color: $dark-color;
+        svg {
+            color: #fff;
+        }
+        li {
+            &:hover {
+                background-color: $dark-second-background;
+            }
+        }
+    }
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: rgba(0,0,0,0.12) 0px 1px 4px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navbar-logo {
+        min-width: 200px;
+        display: flex;
+        align-items: center;
+        .navbar-icon {
+            padding: 0 10px;
+            cursor: pointer;
+            div.navbar-icon__bar {
+                height: 3px;
+                width: 20px;
+                border-radius: 3px;
+                margin: 3px 0;
+            }
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+        .logo {
+            height: 65px;
+            // background-color: red;
+            padding: 10px 0;
+            margin-left: 10px;
+            
+            img {
+                width: 45px;
+                vertical-align: middle;
+                transform: translateY(-5px);
+            }
+            span#cuongf {
+                font-size: 2.6rem;
+                font-weight: 700;
+                line-height: 45px;
+                display: inline-block;
+                transform: translateX(-3px);
+                // font-family: 'Henny Penny', cursive;
+            }
+        }
+    }
+    .navbar-form {
+        flex-grow: 1;
+        margin: 0 10% 0 5% ;
+        position: relative;
+        // background-color: green;
+        input {
+            display: block;
+            width: 100%;
+            padding: 12px 50px;
+            font-size: 1.2rem;
+            line-height: 16px;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+        }
+        
+        svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        @include maxWidth(992px) {
+            margin: 0 5% 0 3%;
+        }
+        @include maxWidth(768px) {
+            margin: 0 10px;
+        }
+        @include maxWidth(576px) {
+            display: none;
+        }
+    }
+    .navbar-right {
+        min-width: 145px;
+        display: flex;
+        align-items: center;
+        li {
+            padding: 10px;
+
+        }
+        .mode {
+            a {
+                display: none;
+                svg {
+                    font-size: 2.4rem;
+                }
+            }
+            .mode-light {
+                color: $light-second-color;
+            }
+            .mode-dark {
+                color: #fff;
+            }
+            .mode-active {
+                display: block;
+            }
+        }
+        .bell-btn {
+            cursor: pointer;
+            position: relative;
+            @include maxWidth(576px) {
+                display: none;
+            }
+            svg {
+                font-size: 2rem;
+            }
+            span {
+                position: absolute;
+                display: inline-block;
+                padding: 2px 4px;
+                font-size: 1rem;
+                background-color: $danger-color;
+                color: #fff;
+                border-radius: 25%;
+                line-height: 1;
+                top: -1px ;
+                right: 05px;
+            }
+            &:hover {
+                opacity: 0.85;
+            }
+
+        }
+        .avatar {
+            position: relative;
+            .avatar-wrapper {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                cursor: pointer;
+                
+            }
+            .user-menu {
+                
+                position: absolute;
+                top: 100%;
+                right: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                width: 100px;
+                height: 100px;
+                visibility: hidden;
+                opacity: 0;
+                transition: .3s;
+                li {
+                    transition: 0.3s;
+                    cursor: pointer;
+                    width: 300px;
+                    height: 50px;
+                    position: relative;
+                    padding-left: 82px;
+                    line-height: 30px;
+                    svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 41px;
+                        transform: translate(-50%, -50%);
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .user-menu--active {
+                opacity: 1;
+                width: 300px;
+                height: 250px;
+                visibility: visible;
+
+
+            }
+        }
+    }
+}
+
+

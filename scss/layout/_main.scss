@@ -1,0 +1,223 @@
+
+
+
+.main.light {
+    background-color: $light-second-background;
+    color: $light-color;
+
+    .table-area {
+        background-color: $light-background;
+
+        &__head {
+            border-bottom: 1px solid $light-second-background;
+        }
+        &__main {
+            table {
+                tr {
+                    border-top: 1px solid $light-second-background ;
+                }
+            }
+        }
+    }
+    .progress-barr {
+        background-color: $light-background;
+        &__head {
+            border-bottom: 1px solid $light-second-background;
+        }
+        &__main {
+
+            .progress-item {
+                &__bar {
+                    background-color: $light-second-background;
+                }
+            }
+        }
+    }
+    .chart-js-area {
+        background-color: $light-background;
+        &__head {
+            border-bottom: 1px solid $light-second-background;
+        }
+    }
+}
+
+.main.dark {
+    background-color: $dark-second-background;
+    color: $dark-color;
+    .table-area {
+        background-color: $dark-background;
+
+        &__head {
+            border-bottom: 1px solid $dark-second-background;
+        }
+        &__main {
+            table {
+                tr {
+                    border-top: 1px solid $dark-second-background ;
+                }
+            }
+        }
+    }
+    .progress-barr {
+        background-color: $dark-background;
+        &__head {
+            border-bottom: 1px solid $dark-second-background;
+        }
+    }
+    .chart-js-area {
+        background-color: $dark-background;
+        &__head {
+            border-bottom: 1px solid $dark-second-background;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.main {
+    overflow: hidden;
+    padding: 75px 10px 10px 10px;
+    margin-left: 82px;
+    transition: 0.4s;
+    min-height: 100vh;
+    @include maxWidth(576px) {
+        margin-left: 0 !important;
+
+    }
+    .counters {
+        padding: 10px 10px 0 10px;
+        .col {
+            padding-left: 10px ;
+            padding-right: 10px ;
+        }
+
+    }
+
+    .table-progress {
+        margin: 0 5px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 20px;
+        row-gap: 30px;
+        @include maxWidth(992px) {
+        grid-template-columns: 1fr;
+        }
+        .table-area {
+            overflow-x: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            
+            &__head {
+                padding: 15px 30px;
+                position: relative;
+               
+                
+                h3 {
+                    font-size: 1.8rem;
+                    line-height: 22.4px;
+                    margin-bottom: 0;
+                }
+                svg {
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    font-size: 2rem;
+                }
+            }   
+            &__main {
+                padding: 20px;
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 16px;
+                    
+                    td, th {
+                        padding: 15px 12px;
+                    }
+                    td {
+                        .dot {
+                            position: relative;
+                            padding-left: 15px;
+                            i {
+                                display: inline-block;
+                                width: 6.2px;
+                                height: 6.2px;
+                                border-radius: 50%;
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                   
+                }
+
+            }
+        }
+        .progress-area {
+            .progress-barr {
+                border-radius: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+                &__head {
+                    padding: 15px 30px;
+                    position: relative;
+                   
+                    
+                    h3 {
+                        font-size: 1.8rem;
+                        line-height: 22.4px;
+                        margin-bottom: 0;
+                    }
+                    svg {
+                        position: absolute;
+                        right: 30px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                        font-size: 2rem;
+                    }
+                }
+                &__main {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+    .chart-js-area {
+        margin: 30px 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 10px;
+
+        &__head {
+            padding: 15px 30px;
+            
+            h3 {
+                font-size: 18px;
+                line-height: 22.4px;
+
+            }
+        }
+        &__main {
+            padding: 20px;
+        }
+
+    }
+    
+}
+
+.main.ml250 {
+    margin-left: 250px;
+    
+}

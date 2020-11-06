@@ -1,0 +1,95 @@
+
+.sidebar.light {
+    background-color:$light-background;
+    color: $light-color;
+    .sidebar-nav {
+        .sidebar-nav__item {
+            svg {
+                color: $light-second-color;
+            }
+            &:hover {
+                background-color: $light-second-background;
+            }
+        }
+        .sidebar-nav__item--active {
+            background-color: $light-second-background;
+        }
+    }
+}
+
+.sidebar.dark {
+    background-color:$dark-background;
+    color: $dark-color;
+    .sidebar-nav {
+        .sidebar-nav__item {
+            svg {
+                color: $dark-second-color;
+            }
+            &:hover {
+                background-color: $dark-second-background;
+            }
+        }
+        .sidebar-nav__item--active {
+            background-color: $dark-second-background;
+        }
+    }
+}
+.sidebar.w250 {
+    width: 250px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    margin-top: 65px;
+    width: 82px;
+    box-shadow: rgba(0,0,0,0.12) 0px 1px 4px 1px;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.4s;
+    &:hover {
+        width: 250px;
+    }
+    @include maxWidth(576px) {
+      
+        width: 0;
+
+    }
+
+    .sidebar-nav {
+        .sidebar-nav__item {
+            height: 50px;
+            cursor: pointer;
+            line-height: 50px;
+            padding-left: 82px;
+            position: relative;
+            transition: 0.2s;
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 41px;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+            }
+        }
+        .sidebar-nav__item--active {
+            color: $danger-color;
+            position: relative;
+            &::before  {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 50px;
+                background-color: $danger-color;
+                top: 0;
+                left: 0;
+            }
+            svg {
+                color: $danger-color !important;
+            }
+        }
+    }
+}

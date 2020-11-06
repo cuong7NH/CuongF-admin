@@ -1,0 +1,53 @@
+
+
+
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+ul  {
+    list-style-type: none;
+    margin: 0;
+}
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bc-primary {
+    background-color: $primary-color;
+}
+.bc-success {
+    background-color: $success-color;
+}
+.bc-warning {
+    background-color: $warning-color;
+}
+.bc-danger {
+    background-color: $danger-color;
+}
