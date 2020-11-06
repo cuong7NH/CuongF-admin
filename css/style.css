@@ -317,6 +317,8 @@ header {
     background-color: #23242D; }
     .main.dark .progress-barr__head {
       border-bottom: 1px solid #181818; }
+    .main.dark .progress-barr__main .progress-item__bar {
+      background-color: #181818; }
   .main.dark .chart-js-area {
     background-color: #23242D; }
     .main.dark .chart-js-area__head {
