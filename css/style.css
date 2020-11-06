@@ -232,7 +232,11 @@ header {
         position: absolute;
         top: 100%;
         right: 0;
-        transition: 0.5s; }
+        transition: 0.5s;
+        height: 50px;
+        visibility: hidden;
+        opacity: 0;
+        overflow: hidden; }
         header .navbar-right .bell-btn .notifications__head {
           padding: 20px;
           text-align: center;
@@ -264,6 +268,10 @@ header {
           text-align: center;
           line-height: 19.2px;
           margin-bottom: 0; }
+      header .navbar-right .bell-btn .notifications--active {
+        opacity: 1;
+        visibility: visible;
+        height: 620px; }
     header .navbar-right .avatar {
       position: relative; }
       header .navbar-right .avatar .avatar-wrapper {

@@ -68,6 +68,17 @@ darkMode.addEventListener('click', (e) => {
 
 // =================\\
 
+// notifications btn 
+const notificationBtn = document.querySelector('.bell-btn');
+const notificationsMenu = document.querySelector('.notifications');
+notificationBtn.addEventListener('click', () => {
+	notificationsMenu.classList.toggle('notifications--active');
+});
+
+
+
+// =================\\
+
 
 // Avatar Btn \\
 

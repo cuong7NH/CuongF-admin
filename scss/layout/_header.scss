@@ -286,6 +286,10 @@ header {
                 top: 100%;
                 right: 0;
                 transition: 0.5s;
+                height: 50px;
+                visibility: hidden;
+                opacity: 0;
+                overflow: hidden;
                 &__head {
                     padding: 20px;
                     text-align: center;
@@ -327,6 +331,11 @@ header {
                     margin-bottom: 0;
                    
                 }
+            }
+            .notifications--active {
+                opacity: 1;
+                visibility: visible;
+                height: 620px;
             }
 
         }
